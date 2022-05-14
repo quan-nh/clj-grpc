@@ -65,5 +65,18 @@ lein new app clj-grpc
     (println "Server started, listening on 9090")
     (.awaitTermination server))
   ```
-
+  
+- Creating the client
+```clj
+(let [channel (-> (ManagedChannelBuilder/forAddress "localhost" 9090)
+                    (.usePlaintext)
+                    (.build))
+        stub (GreeterGrpc/newBlockingStub channel)
+        req (-> (HelloRequest/newBuilder)
+                (.setName "test")
+                (.build))
+        resp (.sayHello stub req)]
+    (prn resp)
+    (.shutdown channel))
+```
 // TODO https://github.com/AppsFlyer/pronto/
