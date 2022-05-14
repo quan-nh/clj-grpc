@@ -79,4 +79,7 @@ lein new app clj-grpc
     (prn resp)
     (.shutdown channel))
 ```
-// TODO https://github.com/AppsFlyer/pronto/
+
+- AppsFlyer/pronto
++ https://github.com/AppsFlyer/pronto/
++ https://medium.com/appsflyerengineering/appsflyers-open-source-libraries-for-clojure-and-protocol-buffers-da9a87583c41

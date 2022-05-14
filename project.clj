@@ -10,7 +10,7 @@
                  [io.grpc/grpc-protobuf ~grpc-version]
                  [io.grpc/grpc-stub ~grpc-version]
                  [org.apache.tomcat/annotations-api "6.0.53"] ; necessary for Java 9+
-                 ]
+                 [com.appsflyer/pronto "2.1.0"]]
   :main ^:skip-aot clj-grpc.core
   :source-paths ["src/clj"]
   :java-source-paths ["src/java"]
